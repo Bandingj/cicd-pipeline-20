@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "example" {
-  bucket = "my-bucket-neny559"
+  bucket = "my-bucket-neny11"
 
   tags = {
     Name        = "My bucket"
@@ -12,7 +12,7 @@ resource "aws_instance" "example" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "my-server134kkk"
+    Name = "my-server2025"
   }
 }
 
@@ -21,6 +21,6 @@ resource "aws_vpc" "main" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "my-vpc12"
+    Name = "my-vpc11"
   }
 }
