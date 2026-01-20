@@ -1,0 +1,40 @@
+name: deploy terraform code to aws
+
+on:
+  push:
+    branches: 
+          -main
+    
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout the code
+        uses: actions/checkout@v5.0.0
+
+      - name: "Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v5.1.0
+        with:
+         aws-access-key-id: ${{secrets.AWS_ACCESS_KEY}}
+         aws-secret-access-ke: ${{secrets.AWS_SECRET_ACCESS_KEY}}}
+         aws-region: us-east-1
+
+
+      - name: hasicorp - setup terraform
+        uses: hasicorp/setup-terraform@v2.0.3
+    
+      - name: initialise terraform
+        run: terraform init
+
+      - name: Validate terraform code
+        run: terraform Validate
+
+      - name: Plan terraform
+        run: terraform Plan
+
+      - name: deploy terraform to aws
+        run: terraform apply --auto-approve
+
+
