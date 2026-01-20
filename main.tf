@@ -12,7 +12,7 @@ resource "aws_instance" "example" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "my-server134"
+    Name = "my-server134kkk"
   }
 }
 
@@ -21,6 +21,6 @@ resource "aws_vpc" "main" {
   instance_tenancy = "default"
 
   tags = {
-    Name = "my-vpc1"
+    Name = "my-vpc12"
   }
 }
