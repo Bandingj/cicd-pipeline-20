@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "example" {
-  bucket = "my-bucket-neny11"
+  bucket = "my-bucket-neny1"
 
   tags = {
     Name        = "My bucket"
@@ -12,7 +12,7 @@ resource "aws_instance" "example" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "my-server2025"
+    Name = "my-server2025-"
   }
 }
 
